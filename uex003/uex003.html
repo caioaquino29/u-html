@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formilário</title>
+</head>
+<body>
+    <label for="email">Endereço de email</label> 
+    <!-- "label" fuciona como etiqueta e atributo 'for' igual ao valor que outro atributo 'id'  -->
+    <input type="email" id="email" name="email"></input> <br>
+    <label for="tel"> Telefone 
+        <input type="tel" id="tel" name="tel" pattern="\([0-9]{2}\)[\s] [0-9]{5}-[0-9]{4}"> </input>(XX) XXXXX-XXXX
+    </label>
+    <br>
+    <label for="data">Data de nascimento</label>
+    <input type="datetime-local" id="data"></input>
+    <br>
+    <label for="volume">Volume</label>
+    <input type="range" id="volume" name="volume" min="0" max="50">
+    <br>
+    <input type="submit" value="Enviar">
+    <br>
+    <audio controls autoplay loop>
+        <source src="audio/pkon_T_027.mp3" type="audio/mpeg">
+    </audio>
+    
+</body>
+</html>
