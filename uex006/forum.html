@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum código CSS</title>
+    <style>
+        *{ margin: 0px;}
+           body{ 
+            height: 97vh;
+
+           }
+
+        main{
+             height: 700px;
+             display: flex;
+             flex-direction: row;
+             gap: 1px;
+             justify-content: center;
+             align-items: flex-start;
+             flex-wrap: wrap;
+             align-content: space-around;
+             
+             
+             
+             
+            }
+        div{
+            width: 180px;
+            height: 180px; 
+            border-style: dashed;
+            border-color: brown;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 2em;
+            }
+        .bloco1{
+                background-color: orange;               
+               }
+        .bloco2{
+                background-color: magenta;
+                
+               }
+        .bloco3{
+                background-color: crimson;
+                
+               }
+    </style>
+</head>
+<body>
+    <main id="conteiner">
+        <div class="bloco1">1
+        </div>
+        <div class="bloco2">2
+        </div>
+        <div class="bloco3">3
+        </div>
+        <div class="bloco1">1
+        </div>
+        <div class="bloco2">2
+        </div>
+        <div class="bloco3">3
+        </div>
+        
+    </main>
+</body>
+</html>

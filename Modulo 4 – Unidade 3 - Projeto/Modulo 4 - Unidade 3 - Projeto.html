@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto</title>
+    <style>
+        /* IMAGEM FUNDO - Classe que formata a imagem de fundo*/
+        .imagem-fundo {
+          background-image: url('imagens/fundo-doces.jpg');
+          background-size: 1400px 1000px;
+        }
+        /* BARRA SUPERIOR com a logomarca e ícones de contato whatsapp e instagram*/
+        .barra-superior-logo {
+          display: flex;
+          backdrop-filter: blur(10px);
+          border-style:solid; /*bordas escondidas*/
+          border-width: 0.5px;
+          background-color:rgba(46, 1, 36, 0.7);
+          height: 200px;
+          border-radius: 20px;
+          font-family: Brush Script MT, Arial; 
+          font-size:35px;
+          color: seashell;
+          padding: 10px;
+          align-items: center; /*alinha verticalmente os itens no conteiner flex da barra superior*/
+        }
+        
+        /* MENU SUPERIOR - Classe "dropbtn" formata estilo do botão da lista suspensa*/
+        .dropbtn {
+          background-color: #490707;
+          color: white;
+          padding: 20px;
+          min-width: 20px; 
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        /* MENU SUPERIOR - Classe "dropdown" é aplicada no conteiner <div> p/ posicionar conteúdo suspenso */
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        /* MENU SUPERIOR - Classe “dropdown-content”, conteúdo suspenso, escondido por padrão*/
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #fcfcfce5;
+          min-width: 300px;
+          box-shadow: 0px 8px 16px 0px rgb(15, 3, 1);
+          z-index: 1;
+        }
+        /* MENU SUPERIOR - Classe dos links dentro da lista suspensa*/
+        .dropdown-content a {
+          color: rgb(2, 2, 2);
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        /* MENU SUPERIOR - Troca cor dos links qdo cursor está sobre ela (em foco)*/
+        .dropdown-content a:hover {
+            background-color: #f3cfdd
+        }
+        /* MENU SUPERIOR - Mostra menu suspenso qdo cursor está sobre ele (em foco)*/
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        /* MENU SUPERIOR - Troca cor do botão de lista suspensa qdo cursos está sobre a lista*/
+        .dropdown:hover .dropbtn {
+          background-color: #9b3b34b2;
+        }
+        /* CAIXAS - Conteúdo da página classe dos grupos de produtos*/
+        .caixa-transparente {
+          display: block;
+          justify-content: center;
+          background-color:rgba(255, 213, 206,0.6);
+          padding: 10px;
+          max-width: 1000px;
+          border-radius: 20px;
+          align-content: flex-start;
+        }
+        /* CAIXAS - Bordas arredondadas de cada grupo de produtos fundo branco*/
+        .caixa-branca {
+          display: flex;
+          font-family: Garamond, serif, Arial;
+          font-size: 25px;
+          border-style: groove;
+          border-width: 10px;
+          box-shadow: rgb(41, 27, 27);
+          border-color:  rgb(80,13,13);
+          background-color: rgb(255, 255, 255);
+          padding: 15px;
+          margin: 20px;
+          align-items: center;
+          justify-content: left; 
+          border-radius: 20px;
+        }
+
+        /* iframe vídeos*/
+        .iframe-box {
+          display: flex;
+          text-align: center;
+          justify-content:center;
+          position: relative;
+          padding: 20px;
+          margin: 10px;
+        }
+
+        /* CAIXAS - Caixa transparente ao redor dos videos em iFrame*/
+        .caixa-transparente-iframe {
+          display: block;
+          justify-content: center;
+          color: white;
+          background-color:rgba(192, 85, 66, 0.5);
+          max-width:inherit;
+          padding: 15px;
+          border-radius: 20px;
+          align-content: flex-start;
+          text-align: center;
+          font-family: Garamond, serif, Arial; 
+          font-size:35px; 
+        }
+
+        /* Barra inferior*/
+        .barra-inferior {
+        background-color: #490707;
+        text-align: center;
+        padding: 5px;
+        font-family: Garamond, serif, Arial; 
+        font-size:35px; 
+        color:white
+        }
+   </style>
+</head>
+<body class="imagem-fundo"><!--Inicio do conteúdo da página e chama a imagem de fundo!-->   
+        <header><!--Barra superior com imagem e titulo do site!-->
+            <div class="barra-superior-logo">
+                <div> 
+                    <img src="imagens/logo.jpg" alt="logo" width="200px" style="border-radius: 20px"
+                    padding= "5px">
+                </div>
+                <div style="font-family:Brush Script MT; font-size: 50px; margin: 5px; text-align: center; 
+                    vertical-align: middle; padding: 70px;">Lojinha de tortas, doces e sorvetes
+                </div>
+                <div>
+                    <div>  
+                      <a href="https://wa.me/+55XXXXXXXXXXX">
+                        <img src="imagens/zap.png" alt="whatsapp" style="padding: 10px" width="70" height="70">
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://www.instagram.com/cacaushow/?hl=pt-br">
+                        <img src="imagens/instagram.png" alt="instagram" style="padding: 10px" width="70" height="70">
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </header> <br><br>
+        <div class="dropdown"><!--menu de bolo!-->
+            <button class="dropbtn">Bolos</button>
+            <div class="dropdown-content">
+                <a href="subpasta/bolo-chocolate.html">Bolo de chocolate</a>
+                <a href="subpasta/bolo-laranja.html">Bolo de laranja</a>
+                <a href="subpasta/bolo-cenoura.html">Bolo de cenoura</a>
+            </div>
+        </div>
+        <div class="dropdown"><!--menu de bombons!-->
+            <button class="dropbtn">Doces</button>
+            <div class="dropdown-content">
+              <a href="subpasta/doce-chocolate.html">Doce de chocolate</a>
+              <a href="subpasta/doce-laranja.html">Doce de morango</a>
+              <a href="subpasta/doce-cenoura.html">Doce de leite</a>
+            </div>
+        </div>
+        <div class="dropdown"><!--menu de sorvetes!-->
+            <button class="dropbtn">Sorvetes</button>
+            <div class="dropdown-content">
+              <a href="subpasta/sorvete-chocolate.html">Sorvete de chocolate</a>
+              <a href="subpasta/sorvete-morango.html">Sorvete de morango</a>
+              <a href="subpasta/sorvete-coco.html">Sorvete de coco</a>
+            </div>
+        </div>
+        <div class="caixa-transparente"><!--caixa transparente envolvendo grupos produtos!-->
+            <span class="caixa-branca">
+                <div>  
+                    <img src="imagens/bolo-figura.jpg" alt="bolo" width="200">
+                </div>
+                <div>
+                    <a href="HIPERLINK bolo">Bolos especiais</a><br><br>
+                    Acesse nossa seçao de bolos artesenais e conheça as receitas de nossa família, 
+                    preparadas com todo o amor e carinho, utilizando ingredientes naturais e frutas silvestres.
+                </div>
+            </span>
+            <span class="caixa-branca"><!--caixa opaca com grupo de produtos!-->
+                <div> <!--figura de grupo de produtos!-->
+                    <img src="imagens/bombom.jpg" alt="bombons" width="200" href="HIPERLINK">
+                </div>
+                <div> <!--link e descrição de grupo de produtos!-->
+                    <a href="HIPERLINK">Bombons espetaculares</a><br><br>
+                    Produzimos os bombons artesanais mais deliciosos da região, 
+                    saiba mais acessando nossa seção de bombons.
+                </div>
+            </span>
+             <span class="caixa-branca">
+                <div> <!--figura de grupo de produtos!--> 
+                    <img src="imagens/sorvete.jpg" alt="sorvete" width="200">
+                </div>
+                <div> <!--link e descrição de grupo de produtos!-->
+                    <a href="HIPERLINK">Sorvetes maravilhosos</a><br><br>
+                    Nossos sorvetes artesanais são premiados e produzidos com todo o carinho. 
+                    Veja abaixo um video com receita deliciosa.
+                </div>
+        </div>
+        <br><br>
+        <div class="caixa-transparente-iframe"> <!--Caixa para iframe de videos!-->
+            <div>Receitas deliciosas
+            </div>    
+            <div class="iframe-box">
+                <div class="iframe-box">
+                <iframe
+                    src="https://www.youtube.com/embed/qleBrGNr1CE" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                </div>
+                <div class="iframe-box">
+                <iframe
+                    src="https://www.youtube.com/embed/Ot8wJ6HPrg0" 
+                    title="YouTube video player" 
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                </div>
+            </div>
+        </div><br><br>
+        <footer class="barra-inferior">
+            </span>
+            <p style="font-size: 12px">Av. Afonso Pena, 3400 - Cruzeiro, Belo Horizonte - MG, 30130-009</p>
+            <p style="font-size: 8px"> Esta página foi desenvolvida apenas para fins didáticos, 
+                sendo os conteúdos fictícios ou referenciado a fontes da internet</p>
+        </footer>
+</body>
+</html>

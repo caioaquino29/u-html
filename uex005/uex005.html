@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+.dropbtn{ 
+background-color: aquamarine;
+color: blue;
+padding: 16px;
+min-width: 300px;
+font-size: 2em;
+border: none;
+cursor: pointer;
+border-radius: 20px;
+}
+#pri{
+position: relative;
+display: inline-block;
+
+
+}
+#seg{
+display: none;
+position: absolute;
+background-color: rgb(90, 244, 192);
+min-width: 300px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+border-radius: 0px 0px 20px 20px;
+z-index: 1;
+}
+#seg>a {
+color: black;
+font-size: 2em;
+font-weight: bold;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+
+}
+#pri>.dropbtn:hover{ border-radius: 20px 20px 0px 0px ;}
+a>#seg>.dropbtn:hover{ border-radius: 0px ;}
+
+#seg>a:hover{background-color: #2c4b51; color: bisque;
+border-radius: 20px;} 
+#pri:hover>#seg{ display: block;}
+
+
+          
+    </style>
+</head>
+<body>
+    <div id="pri">
+        <button class="dropbtn">Lista suspensa</button>
+        <div id="seg">
+            <a href="#">Opção 1</a> 
+            <a href="#">Opção 2</a> 
+            <a href="#">Opção 3</a>
+        </div>
+    </div>
+    
+</body>
+</html>
